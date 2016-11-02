@@ -1,0 +1,27 @@
+<view class="container carts-list">
+  <view wx:for="{{addCarts}}" class="carts-item" data-pres="{{item.pres}}" data-num="{{item.num}}" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="bindViewTap">
+    <view class="cartsImage">
+     <image class="carts-image" src="{{item.hotImage}}" mode="aspectFill"/>
+    </view>
+   <view class="carts-text">
+    <text class="carts-title">{{item.title}}</text>
+    <view class="carts-subtitle">
+     <text class="carts-price">￥{{item.price}}</text>
+     <view class="stepper">
+       <text class="{{minusStatuses[index]}}" data-index="{{index}}" bindtap="bindMinus">-</text>
+       <input type="number" bindchange="bindManual" value="{{item.num}}"></input>
+       <text class="normal" data-index="{{index}}" bindtap="bindPlus">+</text>
+     </view>
+    </view>
+   </view>
+  </view>
+  <view  wx:for="{{addCarts}}" class="carts-footer">
+    <view class="carts-footer-mes">
+      <text class="">优惠:</text>
+      <text style="color:red;">￥ 00</text>
+      <text class="">总计:</text>
+      <text style="color:red;">￥{{item.num*item.price}}</text>
+    </view>
+   <view class="button">立即结算</view>
+ </view>
+</view>

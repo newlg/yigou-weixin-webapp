@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="mySwiper">
+    <block wx:for="{{hotInfos}}">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <swiper-item>
+        <image src="{{item.hotImage}}" class="slide-image"/>
+        </swiper-item>
+    </swiper>
+    <view class="shopping_info">
+      <view class="title">{{item.title}}</view>
+      <view class="price">{{item.price}}</view>
+      <view class="norms">
+        <text>规格: </text>
+        <text style="margin-left:40rpx;">{{item.norms}}</text>
+      </view>
+      <view class="mes">
+        <text>信息: </text>
+        <text style="margin-left:40rpx;">{{item.mes}}</text>
+      </view>
+      <navigator  class="discuss">
+        <text>用户评价(334)</text>
+        <text>99%好评</text>
+      </navigator>
+      <navigator class="gDetails">
+        <text>商品图文详情(建议在WIFI下观看)</text>
+      </navigator>
+      <view class="des">
+        <text>商品详情：</text>
+        <text>{{item.des}}</text>
+      </view>
+      <view class="detailsImage">
+        <image src="{{item.hotImage}}"></image>
+        <image src="{{item.hotImage}}"></image>
+        <image src="{{item.hotImage}}"></image>
+      </view>
+      <toast hidden="{{toastHidden}}" duration="500" bindchange="toastChange">
+       添加到购物车成功
+       </toast>
+    </view>
+  </block>
+  </view>
+  <view class="spuImage" wx:for="{{hotInfos}}" bindtap="addSpu" id="{{item.id}}" data-mes="{{item.mes}}" data-num="{{item.num}}" data-norms="{{item.norms}}" data-image="{{item.image}}" data-title="{{item.title}}" data-price="{{item.price}}" data-hot-image="{{item.hotImage}}">
+    <image src="http://img05.yiguoimg.com/e/web/160223/00902/101057/add_cart.png"></image>
+
+  </view>
+</view>

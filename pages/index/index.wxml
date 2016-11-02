@@ -1,0 +1,87 @@
+<!--index.wxml-->
+  <view class="container">
+    <view class="header">
+      <image src="http://img02.yiguo.com/e/web/150930/00981/161016/logo640.png"></image>
+      <a href="#"  class="address">
+        <image src="http://img07.yiguoimg.com/e/web/151223/02424/141635/position@2x.png"></image>
+        <em>北京</em>
+      </a>
+    </view>
+
+    <!-- swiper -->
+    <view class="mySwiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{mySwiperImage}}">
+          <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- homeNav -->
+    <view class="homeNav">
+      <block wx:for="{{homeNavArr}}">
+        <navigator class="Cnavigator">
+          <view class="homeTitle">
+            <image src="{{item.homeNavImg}}"></image>
+            <text>{{item.name}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+
+
+    <!-- 新品推荐 newKind -->
+    <view class="newKind">
+      <view class="text">
+        <text style="margin-left:10rpx">新品推荐</text>
+      </view>
+
+      <view class="newKindBody">
+        <block wx:for="{{newKindArr}}">
+          <navigator class="Cnavigator">
+            <view class="newKindImage">
+              <image src="{{item.newKindImage}}"></image>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+
+    <!-- 超值买 -->
+  <view class="cost">
+      <view class="text">
+        <text style="margin-left:10rpx;">超值买</text>
+      </view>
+
+      <view class="costBody">
+      <block wx:for="{{costArr}}">
+        <navigator class="Cnavigator">
+          <view class="costImage">
+            <image src="{{item.costImage}}"></image>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+
+  <!--  人气爆款-->
+  <view class="hot">
+    <view class="text">
+      <text style="margin-left:10rpx;">人气爆款</text>
+    </view>
+
+    <view class="hotBody">
+      <block wx:for="{{hotArr}}">
+        <navigator class="Cnavigator" bindtap="toDetails" url="../details/index?{item.id}" id="{{item.id}}" data-mes="{{item.mes}}" data-norms="{{item.norms}}" data-num="{{item.num}}" data-image="{{item.image}}" data-title="{{item.title}}" data-price="{{item.price}}" data-hot-image="{{item.hotImage}}"data-des="{{item.des}}">
+          <image src="{{item.hotImage}}"></image>
+        </navigator>
+      </block>
+    </view>
+  </view>
+
+
+
+
+  </view>
