@@ -15,6 +15,10 @@
     </view>
    </view>
   </view>
+  <view class="clearCart">
+    <button bindtap="clearCart">清空购物车</button>
+  </view>
+</view>
   <view  wx:for="{{addCarts}}" class="carts-footer">
     <view class="carts-footer-mes">
       <text class="">优惠:</text>
@@ -24,4 +28,3 @@
     </view>
    <view class="button">立即结算</view>
  </view>
-</view>
