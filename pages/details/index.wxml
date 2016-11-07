@@ -16,10 +16,22 @@
       <view class="mes">
         <text>信息: </text>
         <text style="margin-left:40rpx;">{{item.mes}}</text>
+        <view class="mesImg">
+          <image style="margin-left:40rpx"></image>
+        </view>
+        <!-- <view>
+          <text> 结单时间：24:00 </text>
+          <text> 发货时间：2016-10-23</text>
+          <text> 配送范围：深圳sh北京、上海、广州、</text>
+        </view> -->
       </view>
       <navigator  class="discuss">
         <text>用户评价(334)</text>
-        <text>99%好评</text>
+        <text>99%好评
+          <view class="discussImg">
+            <image style="margin-left:40rpx"></image>
+          </view>
+        </text>
       </navigator>
       <navigator class="gDetails">
         <text>商品图文详情(建议在WIFI下观看)</text>

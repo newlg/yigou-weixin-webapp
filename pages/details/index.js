@@ -20,6 +20,10 @@ Page({
 
     this.setData({toastHidden:false})
     var temp = {id:'',title:'',hotImage:'',price:'',des:'',image:[],norms:'',mes:'',num:''};
+    if (  temp.num > 1) {
+      temp.num++;
+
+    }
     temp.id = event.currentTarget.id;
     temp.title = event.currentTarget.dataset.title;
     temp.hotImage = event.currentTarget.dataset.hotImage;
