@@ -2,7 +2,7 @@
 
     <view class="header">
       <image src="http://img02.yiguo.com/e/web/150930/00981/161016/logo640.png"></image>
-      <view  class="address" bindtap="toAddress" url="address/index">
+      <view class="address" bindtap="toAddress" url="../address/index?{item.id}">
         <image src="http://img07.yiguoimg.com/e/web/151223/02424/141635/position@2x.png"></image>
         <em>北京</em>
       </view>
@@ -22,12 +22,12 @@
     <!-- homeNav -->
     <view class="homeNav">
       <block wx:for="{{homeNavArr}}">
-        <view class="Cnavigator" data-url="item.url" bindtap="tapLink">
+        <navigator class="Cnavigator">
           <view class="homeTitle">
             <image src="{{item.homeNavImg}}"></image>
             <text>{{item.name}}</text>
           </view>
-        </view>
+        </navigator>
       </block>
     </view>
 
