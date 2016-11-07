@@ -41,7 +41,7 @@ Page({
         // var much =   parseInt(app.addCarts[index].num) * parseInt(app.addCarts[index].price);
         // console.log(parseInt(this.data.addCarts[index].price))
 
-        money =
+      
         this.setData({
           addCarts: app.addCarts
         });
