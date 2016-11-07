@@ -1,15 +1,15 @@
 <!--index.wxml-->
-  <view class="container">
+
     <view class="header">
       <image src="http://img02.yiguo.com/e/web/150930/00981/161016/logo640.png"></image>
-      <a href="#"  class="address">
+      <view  class="address" bindtap="toAddress" url="address/index">
         <image src="http://img07.yiguoimg.com/e/web/151223/02424/141635/position@2x.png"></image>
         <em>北京</em>
-      </a>
+      </view>
     </view>
-
+  <view class="container">
     <!-- swiper -->
-    <view class="mySwiper">
+    <view class="mySwiper" >
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
         <block wx:for="{{mySwiperImage}}">
           <swiper-item>
@@ -22,12 +22,12 @@
     <!-- homeNav -->
     <view class="homeNav">
       <block wx:for="{{homeNavArr}}">
-        <navigator class="Cnavigator">
+        <view class="Cnavigator" data-url="item.url" bindtap="tapLink">
           <view class="homeTitle">
             <image src="{{item.homeNavImg}}"></image>
             <text>{{item.name}}</text>
           </view>
-        </navigator>
+        </view>
       </block>
     </view>
 
@@ -50,12 +50,26 @@
     </view>
 
     <!-- 超值买 -->
-  <view class="cost">
+  <view class="cost ">
       <view class="text">
         <text style="margin-left:10rpx;">超值买</text>
       </view>
 
-      <view class="costBody">
+      <view class="costBody pdbody">
+        <view class="cost-l" >
+          <image src="http://img13.yiguoimg.com/e/ad/2016/160914/585749449493913902_315x500.jpg"></image>
+        </view>
+        <view class="cost-r" >
+          <view class="cost-r1">
+            <image src="http://img13.yiguoimg.com/e/ad/2016/160906/585749449312641318_463x250.jpg"></image>
+          </view>
+          <view class="cost-r2">
+            <image src="http://img11.yiguoimg.com/e/ad/2016/160825/585749448991285529_463x250.jpg"></image>
+          </view>
+        </view>
+      </view>
+
+      <!-- <view class="costBody pdbody">
       <block wx:for="{{costArr}}">
         <navigator class="Cnavigator">
           <view class="costImage">
@@ -63,16 +77,16 @@
           </view>
         </navigator>
       </block>
-    </view>
+    </view> -->
   </view>
 
   <!--  人气爆款-->
-  <view class="hot">
+  <view class="hot ">
     <view class="text">
       <text style="margin-left:10rpx;">人气爆款</text>
     </view>
 
-    <view class="hotBody">
+    <view class="hotBody pdbody">
       <block wx:for="{{hotArr}}">
         <navigator class="Cnavigator" bindtap="toDetails" url="../details/index?{item.id}" id="{{item.id}}" data-mes="{{item.mes}}" data-norms="{{item.norms}}" data-num="{{item.num}}" data-image="{{item.image}}" data-title="{{item.title}}" data-price="{{item.price}}" data-hot-image="{{item.hotImage}}"data-des="{{item.des}}">
           <image src="{{item.hotImage}}"></image>
@@ -80,8 +94,12 @@
       </block>
     </view>
   </view>
-
-
-
+  <!-- mesother -->
+  <view class="mesOther">
+    <text>沪ICP备09008015号</text>
+    <text>m.yiguo.com</text>
+    <text>上海易果电子商务有限公司</text>
+    <text>上海市金钟路999号c幢6楼</text>
+  </view>
 
   </view>
