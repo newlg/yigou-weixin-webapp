@@ -112,6 +112,16 @@ Page({
    num: '1',
   des: '这个是对三都港无公害黄花鱼的表述，相信我们会爱上他的，好吃不贵，经济实惠，大家速速动起手指选购吧'
 },
+   ],
+   address:[
+     '北京',
+     '上海',
+     '广州',
+     '深圳',
+     '海口',
+     '哈尔滨',
+     '齐齐哈尔',
+     '三亚'
    ]
 
 
@@ -142,5 +152,14 @@ Page({
       // console.log(app.hotInfos);
 
 
+    },
+    tapLink: function(e){
+      wx.navigateTo({
+        url: e.currentTarget.dataset.url
+      })
+
+    },
+    toAddress: function(e){
+      console.log('1');
     }
 })
