@@ -41,11 +41,20 @@ Page({
         // var much =   parseInt(app.addCarts[index].num) * parseInt(app.addCarts[index].price);
         // console.log(parseInt(this.data.addCarts[index].price))
 
-      
+
         this.setData({
           addCarts: app.addCarts
         });
 
 
+  },
+  clearCart: function(e){
+    app.addCarts = [];
+    var that = this;
+    this.setData({
+      addCarts: app.addCarts
+            });
   }
+
+
 })

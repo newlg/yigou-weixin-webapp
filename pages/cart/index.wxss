@@ -72,6 +72,19 @@
   text-align: center;
 
 }
+.clearCart{
+  display: flex;
+  justify-content: center;
+  padding-top: 30rpx;
+  padding-bottom: 150rpx;
+
+}
+.clearCart button{
+  color: #008842;
+}
+
+
+
 .carts-footer{
   width: 100%;
   height: 50rpx;
