@@ -142,6 +142,7 @@ Page({
       temp.num = event.currentTarget.dataset.num;
 
 
+
       temp.image = event.currentTarget.dataset.image;
 
 
@@ -161,5 +162,8 @@ Page({
     },
     toAddress: function(e){
       console.log('1');
+      // wx.navigateTo({
+      //   url: e.currentTarget.dataset.url
+      // })
     }
 })
